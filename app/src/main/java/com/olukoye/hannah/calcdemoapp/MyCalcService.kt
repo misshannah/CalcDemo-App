@@ -9,10 +9,6 @@ import android.util.Log
 class MyCalcService : IntentService("MyCalcService") {
     private val TAG = "CalcService"
 
-    override fun onCreate() {
-        super.onCreate()
-        Log.d(TAG, "onCreate()")
-    }
     override fun onBind(intent: Intent): IBinder {
         // Return the interface
         return binder
@@ -42,8 +38,4 @@ class MyCalcService : IntentService("MyCalcService") {
         TODO("Not yet implemented")
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        Log.d(TAG, "onDestroy()")
-    }
 }

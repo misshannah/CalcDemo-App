@@ -101,23 +101,8 @@ class MainActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-//        bindService(
-//            Intent("com.olukoye.hannah.calcdemoapp.MyCalcService").setPackage("com.olukoye.hannah.calcdemoapp"),
-//            this@MainActivity,
-//            Context.BIND_AUTO_CREATE
-//        )
         val intent = Intent(this, MyCalcService::class.java)
         bindService(intent, connection, BIND_AUTO_CREATE)
     }
 
-//    override fun onServiceConnected(
-//        componentName: ComponentName?,
-//        iBinder: IBinder?
-//    ) {
-//        service = ICalcService.Stub.asInterface(iBinder)
-//    }
-//
-//    override fun onServiceDisconnected(componentName: ComponentName?) {
-//        service = null
-//    }
 }
